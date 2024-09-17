@@ -1,7 +1,12 @@
 import joblib
 
-
 def predict(data):
-    model = joblib.load("spam_model.sav")
-    return model.predict(data)
+    modelR = joblib.load('spam_modelR.joblib')
+    return modelR.predict(data)
+
+
+#def predict(data):
+    #result = modelR.predict(data)
+    #final_result = "Spam" if result == 1 else "Nicht Spam"
+    #return final_result
 
