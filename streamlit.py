@@ -4,7 +4,7 @@ import numpy as np
 import joblib
 from prediction import predict
 
-
+#data = pd.DataFrame()
 st.title('Spam-Projekt, IKT-SS24')
 st.subheader('Irina Ukhanova')
 
