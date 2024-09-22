@@ -89,9 +89,10 @@ Evaluieren des Datensatzes für Anwendung von jetzigen Spam-Filtern
 <li>Recall - es wurde nur 13% der tatsächlichen positiven Fälle korrekt identifiziert. Dies ist relativ niedrig und weist auf viele falsch negative Vorhersagen hin.</li>
 <li>F1 - es gibt ein Gleichgewicht zwischen Precision und Recall, aber es deutet darauf hin, dass das Modell in Bezug auf die True Positives und False Negatives verbessert werden muss.</li>
 <li>Der niedrige Recall-Wert von 0.13 und der niedrige F1-Score von 0.24 deuten darauf hin, dass das Modell viele tatsächliche positive Fälle nicht erkennt. Dies ist problematisch, weil das Erkennen aller positiven Fälle wichtig für Business ist.</li>
+<li>Das Hauptproblem ist wahrscheinlich der Datensatz, die Daten sind unausgewogen, der SPAM-Anteil ist viel kleiner als der Nicht-Spam-Anteil. </li>
 <p> <b>To Do:</b><br>
-<li>Cross Validation</li>
-<li>Augmentation der Daten</li>
+<li>Cross Validation -um  eine verlässliche Schätzung der Modellperformance auf neuen Daten zu geben und Variabilität der Modellleistung zu bewerten.</li>
+
 
 <p> <h2>Sprint 5: Cross Validation</h2></p>
 <p> <b>Stratified K-Fold Cross Validation auf 5 Folds</b><br>
