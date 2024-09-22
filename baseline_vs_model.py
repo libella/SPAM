@@ -65,3 +65,18 @@ data['prediction'] = predictions
 spam_count = data['prediction'].value_counts()
 
 print(f"Model - Anzahl von Spam (1)  und Nicht-Spam (0)  Nachrichten: {spam_count}")
+
+# Effektivität des trainierten Modells am selben Datensatz überprüfen.
+# das trainierte Modell und den Vektorisierer laden, den csv-Datensatz lesen
+
+model3 = joblib.load('spam_modelN.joblib')
+vectorizer = joblib.load('vectorizer.joblib')
+data = pd.read_csv('spam_nichtspam_datensatz_gen.csv')
+
+message1 = data['message']
+message1_vectors = vectorizer.transform(message1)
+predictions = model3.predict(message1_vectors)
+data['prediction'] = predictions
+spam_count = data['prediction'].value_counts()
+
+print(f"Model - Anzahl von Spam (1)  und Nicht-Spam (0)  Nachrichten: {spam_count}")

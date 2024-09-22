@@ -11,7 +11,6 @@ import joblib
 import matplotlib.pyplot as plt
 import seaborn as sns
 import pandas as pd
-import numpy as np
 #from google.colab import drive #fuer Colab-Projekt
 # Text in Zahlenfeatures konvertieren
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -28,6 +27,9 @@ y = df['spam']  # Zielvariable
 pd.set_option('display.max_columns', None)
 df = pd.read_csv(file_path)
 df.head(3)
+
+print()
+print(f"1. Modell trainieren")
 
 # Daten in Trainings- und Testsets aufteilen: 80% zu 20%
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
@@ -84,7 +86,8 @@ for i in range(len(df)):
     plt.text(i, df['Value'][i] + 0.02, f'{df["Value"][i]:.2f}', ha='center', va='bottom')
 plt.show()
 
-# k-fache Kreuzvalidierung
+print()
+print(f"k-fache Kreuzvalidierung")
 k = 5
 print(f"Stratified K-Fold Cross Validation auf {k} Folds")
 # Textdaten mit TfidfVectorizer vektorisieren
@@ -97,6 +100,8 @@ print(f"Mittlere Performanz auf {k} Folds:  {scores.mean()}")
 print(f"Standardabweichung der Performanz: {scores.std()}")
 
 
+print()
+print(f"Über-Sampling-Methode - synthetische Beispiele für die Minderheitsklasse ")
 # Über-Sampling-Methode SMOTE anwenden, es generiert synthetische Beispiele für die Minderheitsklasse, damit Klassenungleichgewicht ausgeglichen wird.
 smote = SMOTE(random_state=42, k_neighbors=5)
 X_res, y_res = smote.fit_resample(X_vec, y)
@@ -104,6 +109,8 @@ X_res, y_res = smote.fit_resample(X_vec, y)
 print('Ursprünglicher Datensatz %s' % pd.Series(y).value_counts())
 print('Resampelter Datensatz %s' % pd.Series(y_res).value_counts())
 
+print()
+print(f"2. Modell  mit Über-Sampling Daten trainieren")
 # Über-Sampling Daten in Trainings- und Testsets aufteilen: 80% zu 20%
 X_res_train, X_res_test, y_res_train, y_res_test = train_test_split(X_res, y_res, test_size=0.2, random_state=42)
 print(f'Über-Sampling Trainingssetgröße:{X_res_train.shape[0]}')
@@ -163,5 +170,6 @@ plt.show()
 file_path = 'spam_modelR.joblib'
 joblib.dump(modelR, file_path)
 joblib.dump(vectorizer, 'vectorizer.joblib')
-print(f"Model saved successfully at {file_path}")
+print(f"2. Model  ist unter  {file_path} speichert")
+
 
