@@ -106,3 +106,62 @@ Evaluieren des Datensatzes für Anwendung von jetzigen Spam-Filtern
 <p> <b>To Do:</b><br>
 <li>Korrektur des Klassenungleichgewichts - Data Augmentation  </li>
 
+<p> <h2>Sprint 6: Augmentation der Daten und neue Modellentwicklung</h2></p>
+<p> <b>Ziel: Erweiterung von Daten  und evaluieren des Machine Learning Modells.</b><br>
+  <p> <b>Erkenntnisse:</b><br>
+<li>Das Model zeigt hohe Präzision und Genauigkeit und gut in der Lage ist, zwischen positiven und negativen Klassen zu unterscheiden.Das Model weist aber auf False Positives (3) auf. Das ist zwar  eine sehr niedrige Anzahl aber für diesen Business sind False Positives kritisch, weil es heißt dann, das die Nachrichten die nicht Spam sind werden als Spam blockiert: zu viele False Positives können das Vertrauen der Benutzer in ein System beeinträchtigen.  </li>
+<p> <b>Aufgaben:  </b>
+<li>Augmentation - Über-Sampling-Methode SMOTE anwenden, es generiert synthetische Beispiele für die Minderheitsklasse, damit Klassenungleichgewicht ausgeglichen wird - imblearn`-Bibliothek (SMOTE - Synthetic Minority Over-sampling Technique)</li>
+<li>Datensplit (Trainings- und Testdatensatz). Sklearn.model_selection -> train_test_split</li>
+<li>Metriken definieren (Accuracy, Precision, Recall, F1 Score)</li>
+<li>Training und Evaluierung des Modells.</li>
+<p> <b>Ergebnis:  </b>
+<li>Über-Sampling Trainingssetgröße:8665</li>
+<li>Über-Sampling Testsetgröße:2167</li>
+<li>Genauigkeit Über-Sampling: 0.9986155976003692</li>
+<li>Precision Resample: 0.9972451790633609</li>
+<li>Recall Resample: 1.0</li>
+<li>F1 Score Resample: 0.9986206896551724</li>
+<li>Confusion Matrix Resample: [[1078    3]<br>
+ [   0 1086]]</li>
+
+ <p><img src="img/LogRegModel_metriks_3.png" ></p>
+<p><img src="img/confusion_matrix_3.png" ></p>
+
+<p> <h2>Sprint 7: Auswertung des Models in vergleich zum Baseline</h2></p>
+<p> <b>Ziel: Ergebnisse von Spam-Filter und Modellvorhersage zu vergleichen.</b><br>
+<p> <b>Ergebnis: </b>
+<li> <a href = "baseline_vs_model.py"> Skript </a></li>
+<li> <table>
+     <tr>
+    <td> </td>
+    <td>Spam-Filter</td>
+    <td>Modellvorhersage</td>
+    <td>Datensatz</td>
+  </tr>
+  <tr>
+    <td> Anzahl von Spam-Nachrichten:</td>
+    <td>38</td>
+      <td>77</td>
+     <td>68</td>
+  </tr>
+  <tr>
+    <td> Anzahl von Nicht-Spam-Nachrichten:</td>
+    <td>5447</td>
+      <td>5407</td>
+     <td>5416</td>
+  </tr>
+</table>
+
+
+<p> <h2>Sprint 8: Implementierung der Streamlit App </h2></p>
+<p> <b>Ziel: Implementierung der Streamlit App. </b><br>
+<p> <b>Aufgaben: </b><br>
+<li> Grundgerüst der Streamlit App erstellen. </li>
+<li> Datenexploration in der App darstellen. </li>
+<li>  Modellvorhersagen in der App integrieren. </li>
+
+
+<p> <b>Ergebnis: </b>
+<li> Funktionsfähige <a href = "https://spamornotp4g.streamlit.app/"> Streamlit App </a>   . </li>
+<li> Interaktive Modellvorhersagen. </li>
