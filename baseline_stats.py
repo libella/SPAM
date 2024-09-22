@@ -17,7 +17,7 @@ def filter_spam_messages(messages, spam_words):
     
     return filtered_messages, nonspam_count, spam_count
 
-spam_words = ["sex", "muschi", "sexy"]
+spam_words = ["y?urs?lf", "??autiful"]
 
 # Read messages from file
 filename = "spam_nichtspam_datensatz.csv"
