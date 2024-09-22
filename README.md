@@ -5,6 +5,11 @@
 <p> Das Ziel dieses Projekts ist es, die Sicherheit von Buchungsanfragen auf einem Immobilienportal zu erhöhen, indem anfällige und gefährliche Anfragen automatisch vom System erkannt und blockiert werden. Hierbei sollen ML-Techniken angewendet werden, um legitime Buchungsanfragen von Spam zu unterscheiden. Dies schützt sowohl das Unternehmen als auch die Nutzer vor potenziellen Betrugsversuchen und anderen schädlichen Aktivitäten.</p>
 
 <p><b>Datensatz: </b> Ein unternehmensinterner Datensatz, der Spam-Buchungsanfragen enthält. Dieser Datensatz besteht aus Inhalt der Nachricht und Spam/nicht Spam Labels</p>
+
+<p><b>Ergebnisse: </b> Das Model, das als letztes trainiert wurdem, zeigt hohe Präzision und Genauigkeit und gut in der Lage ist, zwischen positiven und negativen Klassen zu unterscheiden.Das Model weist aber auf False Positives (3) auf. Das ist zwar  eine sehr niedrige Anzahl aber für den Business können False Positives kritisch sein, weil es heißt dann, das die Nachrichten die nicht Spam sind werden als Spam blockiert: zu viele False Positives können das Vertrauen der Benutzer in ein System beeinträchtigen. 
+Der Vergleich von ERgebnissen des Verhersagemodells und Spam-Filters zeigen, das das Model weist 
+</p>
+
 <a href = "https://spamornotp4g.streamlit.app/"> Streamlit App </a>   
 
 <p> <h2>Sprint 1: Problemdefinition und Prozessexploration</h2></p>
