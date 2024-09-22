@@ -2,7 +2,6 @@ from sklearn.model_selection import train_test_split #teilt die Daten in Trainin
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import cross_val_score
 from imblearn.over_sampling import SMOTE
-from sklearn.metrics import make_scorer
 from sklearn.metrics import accuracy_score
 from sklearn.metrics import f1_score
 from sklearn.metrics import precision_score
@@ -118,8 +117,8 @@ modelR.fit(X_res_train, y_res_train)
 y_res_pred = modelR.predict(X_res_test)
 
 # Genauigkeit (Über-Sampling) berechnen
-accuracy = accuracy_score(y_res_test, y_res_pred)
-print(f'Genauigkeit Über-Sampling: {accuracy}')
+accuracyR = accuracy_score(y_res_test, y_res_pred)
+print(f'Genauigkeit Über-Sampling: {accuracyR}')
 
 # Über-Sampling y_res_test and y_res_pred in konvertieren
 y_res_test_numeric = y_res_test.astype(int)
@@ -147,6 +146,18 @@ plt.xlabel('Predicted')
 plt.ylabel('Actual')
 plt.title('Confusion Matrix Resampled')
 plt.show()
+
+#  Über-Sampling Metriken plotten
+metrics = {'Metric Resampled': ['Accuracy', 'Precision', 'Recall', 'F1 Score'],'Value': [accuracyR, precisionR, recallR, f1R]}
+df = pd.DataFrame(metrics)
+sns.barplot(x='Metric Resampled', y='Value', hue='Metric Resampled', data=df, palette='viridis')
+plt.ylim(0, 1.1)
+plt.title('Logistic Regression Model (Resampled) Performance Metrics')
+for i in range(len(df)):
+    # Text auf den Balken setzen
+    plt.text(i, df['Value'][i] + 0.02, f'{df["Value"][i]:.2f}', ha='center', va='bottom')
+plt.show()
+
 
 #Model speichern
 file_path = 'spam_modelR.joblib'
