@@ -8,12 +8,12 @@
 <a href = "https://spamornotp4g.streamlit.app/"> Streamlit App </a>   
 
 <p> <h2>Sprint 1: Problemdefinition und Prozessexploration</h2></p>
-<p> <b>Ziel: </b><br>
+<p> <b>Ziel: </b><br></p>
 Problem und Status Quo Prozesse im Unternehmen besser verstehen<br>
-<p> <b>Aufgaben: </b>
+<p> <b>Aufgaben: </b></p>
 <li>Status Quo Prozess von Spamerkennung von Nachrichten erkennen und beschreiben </li>
 <li>Ziel des Projekt definieren - alle Spam-Nachrichten auffangen</li><br>
-<p> <b>Ergebnis: </b><br>
+<p> <b>Ergebnis: </b><br></p>
 <li>Flowchart von Prozessen</li>
 <li>Problem ist klar dargestellt, Ziel definiert - alle Spam-Nachrichten auffangen</li>
 <img src="img/SPAMprojekt.png" >
@@ -80,4 +80,6 @@ Evaluieren des Datensatzes für Anwendung von jetzigen Spam-Filtern
 <li>Confusion Matrix: [[1082    0] <br>
  [  13    2]] </li>
 
+<p><img src="img/LogRegModel_metriks_2.png" ></p>
+<p><img src="img/img/confusion_matrix_2.png" ></p>
 
