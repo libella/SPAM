@@ -170,6 +170,6 @@ plt.show()
 file_path = 'spam_modelR.joblib'
 joblib.dump(modelR, file_path)
 joblib.dump(vectorizer, 'vectorizer.joblib')
-print(f"2. Model  ist unter  {file_path} speichert")
+print(f"2. Model  ist unter  {file_path} gespeichert")
 
 
