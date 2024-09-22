@@ -19,7 +19,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 # Daten laden
 # file_path = '/content/drive/MyDrive/Colab Notebooks/ProjektSpam/spam_nichtspam_datensatz.csv' #fuer Colab-Projekt
 file_path = 'spam_nichtspam_datensatz.csv'
-df = pd.read_csv(file_path)#fuer Colab-Proje
+df = pd.read_csv(file_path)
 X = df[['message']]  # Features
 y = df['spam']  # Zielvariable
 

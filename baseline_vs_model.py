@@ -23,7 +23,7 @@ with open('spam_nichtspam_datensatz_output.csv', 'w', newline='', encoding='utf-
 spam_words = ["sex", "porno", "porn", "erotik", "erotisch", "erotic", "nackt", "nude", "camgirl","milf","eskort","dating", "escort","sexchat", "sex chat","xxx"]
 file_path = 'spam_nichtspam_datensatz_output.csv'
 
-# Nachricht im Kleinbuchstaben konvertiren und über die Liste von Spam-Woerter iterieren um zu checken ob ein Spam-Wort in der Nachricht enthalten ist
+# Nachricht im Kleinbuchstaben konvertiren
 def check_spam(message: str, spam_words: list) -> bool:
     message_lower = message.lower()
     for word in spam_words:
@@ -66,17 +66,3 @@ spam_count = data['prediction'].value_counts()
 
 print(f"Model - Anzahl von Spam (1)  und Nicht-Spam (0)  Nachrichten: {spam_count}")
 
-# Effektivität des trainierten Modells am selben Datensatz überprüfen.
-# das trainierte Modell und den Vektorisierer laden, den csv-Datensatz lesen
-
-model3 = joblib.load('spam_modelN.joblib')
-vectorizer = joblib.load('vectorizer.joblib')
-data = pd.read_csv('spam_nichtspam_datensatz_gen.csv')
-
-message1 = data['message']
-message1_vectors = vectorizer.transform(message1)
-predictions = model3.predict(message1_vectors)
-data['prediction'] = predictions
-spam_count = data['prediction'].value_counts()
-
-print(f"Model - Anzahl von Spam (1)  und Nicht-Spam (0)  Nachrichten: {spam_count}")
