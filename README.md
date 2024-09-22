@@ -81,5 +81,5 @@ Evaluieren des Datensatzes für Anwendung von jetzigen Spam-Filtern
  [  13    2]] </li>
 
 <p><img src="img/LogRegModel_metriks_2.png" ></p>
-<p><img src="img/img/confusion_matrix_2.png" ></p>
+<p><img src="img/confusion_matrix_2.png" ></p>
 
