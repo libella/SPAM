@@ -83,3 +83,25 @@ Evaluieren des Datensatzes für Anwendung von jetzigen Spam-Filtern
 <p><img src="img/LogRegModel_metriks_2.png" ></p>
 <p><img src="img/confusion_matrix_2.png" ></p>
 
+<p> <b>Erkenntnisse zur Verbesserung des Modells.</b><br>
+<li>Genauigkeit ist sehr hoch, kann aber irreführend bei ungewogenen Daten sein.</li>
+<li>Precision ist ideal</li>
+<li>Recall - es wurde nur 13% der tatsächlichen positiven Fälle korrekt identifiziert. Dies ist relativ niedrig und weist auf viele falsch negative Vorhersagen hin.</li>
+<li>F1 - es gibt ein Gleichgewicht zwischen Precision und Recall, aber es deutet darauf hin, dass das Modell in Bezug auf die True Positives und False Negatives verbessert werden muss.</li>
+<li>Der niedrige Recall-Wert von 0.13 und der niedrige F1-Score von 0.24 deuten darauf hin, dass das Modell viele tatsächliche positive Fälle nicht erkennt. Dies ist problematisch, weil das Erkennen aller positiven Fälle wichtig für Business ist.</li>
+<p> <b>To Do:</b><br>
+<li>Cross Validation</li>
+<li>Augmentation der Daten</li>
+
+<p> <h2>Sprint 5: Cross Validation</h2></p>
+<p> <b>Stratified K-Fold Cross Validation auf 5 Folds</b><br>
+<li>Cross-Validation Scores: [0.98723792 0.98723792 0.98723792 0.9881495  0.98813869]</li>
+<li>Mittlere Performanz auf 5 Folds:  0.9876003899154296</li>
+<li>Standardabweichung der Performanz: 0.00044394437241151524</li>
+
+<p> <b>Erkenntnisse:</b><br>
+<li>Die Kreuzvalidierung zeigt, dass das Modell sehr gute Ergebnisse liefert und robust ist. Allerdings weisen der niedrige Recall und der niedrige F1-Score zusammen mit  auf das Problem der Klassenungleichgewichte hin. </li>
+
+<p> <b>To Do:</b><br>
+<li>Korrektur des Klassenungleichgewichts - Data Augmentation  </li>
+
