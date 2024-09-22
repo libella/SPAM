@@ -59,7 +59,25 @@ Evaluieren des Datensatzes für Anwendung von jetzigen Spam-Filtern
   <tr>
     <td> Anzahl von Nicht-Spam-Nachrichten:</td>
     <td>5447</td>
-     <th>5416</th>
+     <td>5416</td>
   </tr>
 </table>
+
+<p> <h2>Sprint 4: Modellentwicklung und erste Evaluierung</h2></p>
+<p> <b>Ziel: Erstellen und evaluieren eines ersten Machine Learning Modells.</b><br>
+<p> <b>Aufgaben:  </b>
+<li>Auswahl des Baseline-Modells -  sklearn.linear_model -> Logistische Regression </li>
+<li>Datensplit (Trainings- und Testdatensatz). Sklearn.model_selection -> train_test_split</li>
+<li>Metriken definieren (Accuracy, Precision, Recall, F1 Score)</li>
+<li>Training und erste Evaluierung des Modells.</li>
+<p> <b>Ergebnis:  </b>
+<li>Trainingssetgröße:4387</li>
+<li>Testsetgröße:1097</li>
+<li>Genauigkeit: 0.9881494986326345</li>
+<li>Precision: 1.0</li>
+<li>Recall: 0.13333333333333333</li>
+<li>F1 Score: 0.23529411764705882 </li>
+<li>Confusion Matrix: [[1082    0] <br>
+ [  13    2]] </li>
+
 
