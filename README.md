@@ -108,8 +108,7 @@ Evaluieren des Datensatzes für Anwendung von jetzigen Spam-Filtern
 
 <p> <h2>Sprint 6: Augmentation der Daten und neue Modellentwicklung</h2></p>
 <p> <b>Ziel: Erweiterung von Daten  und evaluieren des Machine Learning Modells.</b><br>
-  <p> <b>Erkenntnisse:</b><br>
-<li>Das Model zeigt hohe Präzision und Genauigkeit und gut in der Lage ist, zwischen positiven und negativen Klassen zu unterscheiden.Das Model weist aber auf False Positives (3) auf. Das ist zwar  eine sehr niedrige Anzahl aber für diesen Business sind False Positives kritisch, weil es heißt dann, das die Nachrichten die nicht Spam sind werden als Spam blockiert: zu viele False Positives können das Vertrauen der Benutzer in ein System beeinträchtigen.  </li>
+
 <p> <b>Aufgaben:  </b>
 <li>Augmentation - Über-Sampling-Methode SMOTE anwenden, es generiert synthetische Beispiele für die Minderheitsklasse, damit Klassenungleichgewicht ausgeglichen wird - imblearn`-Bibliothek (SMOTE - Synthetic Minority Over-sampling Technique)</li>
 <li>Datensplit (Trainings- und Testdatensatz). Sklearn.model_selection -> train_test_split</li>
@@ -127,6 +126,9 @@ Evaluieren des Datensatzes für Anwendung von jetzigen Spam-Filtern
 
  <p><img src="img/LogRegModel_metriks_3.png" ></p>
 <p><img src="img/confusion_matrix_3.png" ></p>
+
+  <p> <b>Erkenntnisse:</b><br>
+<li>Das Model zeigt hohe Präzision und Genauigkeit und gut in der Lage ist, zwischen positiven und negativen Klassen zu unterscheiden.Das Model weist aber auf False Positives (3) auf. Das ist zwar  eine sehr niedrige Anzahl aber für diesen Business sind False Positives kritisch, weil es heißt dann, das die Nachrichten die nicht Spam sind werden als Spam blockiert: zu viele False Positives können das Vertrauen der Benutzer in ein System beeinträchtigen.  </li>
 
 <p> <h2>Sprint 7: Auswertung des Models in vergleich zum Baseline</h2></p>
 <p> <b>Ziel: Ergebnisse von Spam-Filter und Modellvorhersage zu vergleichen.</b><br>
