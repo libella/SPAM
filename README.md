@@ -14,7 +14,7 @@ Das Modell zeigt eine hohe Präzision und Genauigkeit und kann gut zwischen posi
 Da die Kreuzvalidierung sehr gute Ergebnisse zeigt und auch die allgemeinen Metriken nach dem Oversampling sehr gut sind, deuten die allgemeinen Ergebnisse nicht direkt auf Overfitting hin. Daher muss das Modell weiter trainiert werden.
 <p> <b>Weitere mögliche Schritte </b><br>
 <li>Entscheidungsschwellenwert für Logostosche Regression anpassen um False Positives zu reduzieren (Nachteil - möglicherweise auf Kosten der Steigerung von False  Negatives)</li>
-<li>Datensatz mit weiteren realen Daten erweitern</li>
+<li>Qualität der Datensatz erhöhen -  mit weiteren realen Daten erweitern, jetzt sind die Daten etwa verrauscht </li>
 <li>ein komplexeres Modell ausprobieren (z.B. Random Forest)</li>
 
 
