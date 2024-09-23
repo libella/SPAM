@@ -19,7 +19,7 @@ Da die Kreuzvalidierung sehr gute Ergebnisse zeigt und auch die allgemeinen Metr
 <li>ein komplexeres Modell ausprobieren (z.B. Random Forest)</li>
 <p>
 <p> <b>Wichtige Links</b><br>
-<a href = "SpamKlassifikationPrasentation.pdf"> Präsentation des Projekts Juli 2024</a>  
-<a href = "Sprints_Projektbeschreibung.ipynb"> Sprints</a>   
-<a href = "https://spamornotp4g.streamlit.app/"> Streamlit App </a>   
+<a href = "SpamKlassifikationPrasentation.pdf"> Präsentation des Projekts Juli 2024</a>  <br>
+<a href = "Sprints_Projektbeschreibung.ipynb"> Sprints</a>  <br> 
+<a href = "https://spamornotp4g.streamlit.app/"> Streamlit App </a>  <br> 
 
