@@ -5,6 +5,19 @@
 <p> Das Ziel dieses Projekts ist es, die Sicherheit von Buchungsanfragen auf einem Immobilienportal zu erhöhen, indem anfällige und gefährliche Anfragen automatisch vom System erkannt und blockiert werden. Hierbei sollen ML-Techniken angewendet werden, um legitime Buchungsanfragen von Spam zu unterscheiden. Dies schützt sowohl das Unternehmen als auch die Nutzer vor potenziellen Betrugsversuchen und anderen schädlichen Aktivitäten.</p>
 
 <p><b>Datensatz: </b> Ein unternehmensinterner Datensatz, der Spam-Buchungsanfragen enthält. Dieser Datensatz besteht aus Inhalt der Nachricht und Spam/nicht Spam Labels</p>
+<p><b>ML-Instrumente: </b> 
+<li> Logistische Regression</li>
+<li> Cross Validation</li>
+<li> Oversampling</li>
+<p> <b>Erkenntnisse </b><br>
+Das Modell zeigt eine hohe Präzision und Genauigkeit und kann gut zwischen positiven und negativen Klassen unterscheiden. Es zeigt aber auch False Positives (3). Dies ist zwar eine sehr geringe Anzahl, aber für dieses Geschäftsmodell sind False Positives kritisch, da sie bedeuten, dass Nachrichten, die kein Spam sind, als Spam blockiert werden: zu viele False Positives können das Vertrauen der Benutzer in das System beeinträchtigen.
+Da die Kreuzvalidierung sehr gute Ergebnisse zeigt und auch die allgemeinen Metriken nach dem Oversampling sehr gut sind, deuten die allgemeinen Ergebnisse nicht direkt auf Overfitting hin. Daher kann man weitere mögliche Schritte vornehmen:
+<li>Entscheidungsschwellenwert für Logistische Regression anpassen um False Positives zu reduzieren (Nachteil - möglicherweise auf Kosten der Steigerung von False  Negatives)</li>
+<li>Qualität der Datensatz erhöhen -  mit weiteren realen Daten erweitern, jetzt sind die Daten etwa verrauscht </li>
+<li>ein komplexeres Modell ausprobieren (z.B. Random Forest)</li>
+
+
+
 <a href = "https://spamornotp4g.streamlit.app/"> Streamlit App </a>   
 
 <p> <h2>Sprint 1: Problemdefinition und Prozessexploration</h2></p>
@@ -37,7 +50,9 @@ Datenaufbereitung und erste Explorative Datenanalysen.
 
 <p> Ergebnis: 
 <li> Sauberer und explorierter <a href = "spam_nichtspam_datensatz.csv"> Datensatz </a>.   </li>
-
+<p> <b>Erkenntnisse </b><br>
+<li>Mehr als 45 % der Spam-Anfragen werden vom vorhandenen Spam-Filter nicht abgefangen.</li>
+  
 <p> <h2>Sprint 3: Evaluierung vom Datensatz als Baseline</h2></p>
 <p> <b>Ziel:  </b><br>
 Evaluieren des Datensatzes für Anwendung von jetzigen Spam-Filtern
@@ -154,8 +169,12 @@ Evaluieren des Datensatzes für Anwendung von jetzigen Spam-Filtern
      <td>5416</td>
   </tr>
 </table>
-
-
+<p> <b>Erkenntnisse </b><br>
+<li>Das Vorhersage-Modell kann sehr gut richtigen Spam identifizieren aber es werden auch dabei eine kleine Anzahl von Nicht-Spam Nachrichten als Spam gefiltered. Also ist das Modell muss weitertrainirt werden. Da Kreuzvalidierung sehr gute Ergebnisse zeigt, deuten die Ergebnisse nicht direkt auf Overfitting hin.  </li>
+<li> Ausblick:  </li>
+<ul> ein anderes Modell ausprobieren (z.B. Random Forest) </ul>
+<ul> Datensatz mit weiteren echten Daten erweitern  </ul>
+  
 <p> <h2>Sprint 8: Implementierung der Streamlit App </h2></p>
 <p> <b>Ziel: Implementierung der Streamlit App. </b><br>
 <p> <b>Aufgaben: </b><br>
