@@ -11,9 +11,8 @@
 <li> Oversampling</li>
 <p> <b>Erkenntnisse </b><br>
 Das Modell zeigt eine hohe Präzision und Genauigkeit und kann gut zwischen positiven und negativen Klassen unterscheiden. Es zeigt aber auch False Positives (3). Dies ist zwar eine sehr geringe Anzahl, aber für dieses Geschäftsmodell sind False Positives kritisch, da sie bedeuten, dass Nachrichten, die kein Spam sind, als Spam blockiert werden: zu viele False Positives können das Vertrauen der Benutzer in das System beeinträchtigen.
-Da die Kreuzvalidierung sehr gute Ergebnisse zeigt und auch die allgemeinen Metriken nach dem Oversampling sehr gut sind, deuten die allgemeinen Ergebnisse nicht direkt auf Overfitting hin. Daher muss das Modell weiter trainiert werden.
-<p> <b>Weitere mögliche Schritte </b><br>
-<li>Entscheidungsschwellenwert für Logostosche Regression anpassen um False Positives zu reduzieren (Nachteil - möglicherweise auf Kosten der Steigerung von False  Negatives)</li>
+Da die Kreuzvalidierung sehr gute Ergebnisse zeigt und auch die allgemeinen Metriken nach dem Oversampling sehr gut sind, deuten die allgemeinen Ergebnisse nicht direkt auf Overfitting hin. Daher kann man weitere mögliche Schritte vornehmen:
+<li>Entscheidungsschwellenwert für Logistische Regression anpassen um False Positives zu reduzieren (Nachteil - möglicherweise auf Kosten der Steigerung von False  Negatives)</li>
 <li>Qualität der Datensatz erhöhen -  mit weiteren realen Daten erweitern, jetzt sind die Daten etwa verrauscht </li>
 <li>ein komplexeres Modell ausprobieren (z.B. Random Forest)</li>
 
