@@ -10,6 +10,7 @@
 <li> Logistische Regression</li>
 <li> Cross Validation</li>
 <li> Oversampling</li>
+  <p>
 <p> <b>Erkenntnisse </b><br>
 Das Modell zeigt eine hohe Präzision und Genauigkeit und kann gut zwischen positiven und negativen Klassen unterscheiden. Es zeigt aber auch False Positives (3). Dies ist zwar eine sehr geringe Anzahl, aber für dieses Geschäftsmodell sind False Positives kritisch, da sie bedeuten, dass Nachrichten, die kein Spam sind, als Spam blockiert werden: zu viele False Positives können das Vertrauen der Benutzer in das System beeinträchtigen.
 Da die Kreuzvalidierung sehr gute Ergebnisse zeigt und auch die allgemeinen Metriken nach dem Oversampling sehr gut sind, deuten die allgemeinen Ergebnisse nicht direkt auf Overfitting hin. Daher kann man weitere mögliche Schritte vornehmen:
