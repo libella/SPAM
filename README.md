@@ -5,11 +5,6 @@
 <p> Das Ziel dieses Projekts ist es, die Sicherheit von Buchungsanfragen auf einem Immobilienportal zu erhöhen, indem anfällige und gefährliche Anfragen automatisch vom System erkannt und blockiert werden. Hierbei sollen ML-Techniken angewendet werden, um legitime Buchungsanfragen von Spam zu unterscheiden. Dies schützt sowohl das Unternehmen als auch die Nutzer vor potenziellen Betrugsversuchen und anderen schädlichen Aktivitäten.</p>
 
 <p><b>Datensatz: </b> Ein unternehmensinterner Datensatz, der Spam-Buchungsanfragen enthält. Dieser Datensatz besteht aus Inhalt der Nachricht und Spam/nicht Spam Labels</p>
-
-<p><b>Ergebnisse: </b> Das Model, das als letztes trainiert wurdem, zeigt hohe Präzision und Genauigkeit und gut in der Lage ist, zwischen positiven und negativen Klassen zu unterscheiden.Das Model weist aber auf False Positives (3) auf. Das ist zwar  eine sehr niedrige Anzahl aber für den Business können False Positives kritisch sein, weil es heißt dann, das die Nachrichten die nicht Spam sind werden als Spam blockiert: zu viele False Positives können das Vertrauen der Benutzer in ein System beeinträchtigen. 
-Der Vergleich von ERgebnissen des Verhersagemodells und Spam-Filters zeigen, das das Model weist 
-</p>
-
 <a href = "https://spamornotp4g.streamlit.app/"> Streamlit App </a>   
 
 <p> <h2>Sprint 1: Problemdefinition und Prozessexploration</h2></p>
@@ -42,7 +37,9 @@ Datenaufbereitung und erste Explorative Datenanalysen.
 
 <p> Ergebnis: 
 <li> Sauberer und explorierter <a href = "spam_nichtspam_datensatz.csv"> Datensatz </a>.   </li>
-
+<p> <b>Erkenntnisse </b><br>
+<li>Mehr als 45 % der Spam-Anfragen werden vom vorhandenen Spam-Filter nicht abgefangen.</li>
+  
 <p> <h2>Sprint 3: Evaluierung vom Datensatz als Baseline</h2></p>
 <p> <b>Ziel:  </b><br>
 Evaluieren des Datensatzes für Anwendung von jetzigen Spam-Filtern
@@ -159,8 +156,12 @@ Evaluieren des Datensatzes für Anwendung von jetzigen Spam-Filtern
      <td>5416</td>
   </tr>
 </table>
-
-
+<p> <b>Erkenntnisse </b><br>
+<li>Das Vorhersage-Modell kann sehr gut richtigen Spam identifizieren aber es werden auch dabei eine kleine Anzahl von Nicht-Spam Nachrichten als Spam gefiltered. Also ist das Modell muss weitertrainirt werden. Da Kreuzvalidierung sehr gute Ergebnisse zeigt, deuten die Ergebnisse nicht direkt auf Overfitting hin.  </li>
+<li> Ausblick:  </li>
+<ul> ein anderes Modell ausprobieren (z.B. Random Forest) </ul>
+<ul> Datensatz mit weiteren echten Daten erweitern  </ul>
+  
 <p> <h2>Sprint 8: Implementierung der Streamlit App </h2></p>
 <p> <b>Ziel: Implementierung der Streamlit App. </b><br>
 <p> <b>Aufgaben: </b><br>
