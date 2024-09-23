@@ -17,8 +17,8 @@ Da die Kreuzvalidierung sehr gute Ergebnisse zeigt und auch die allgemeinen Metr
 <li>Entscheidungsschwellenwert für Logistische Regression anpassen um False Positives zu reduzieren (Nachteil - möglicherweise auf Kosten der Steigerung von False  Negatives)</li>
 <li>Qualität der Datensatz erhöhen -  mit weiteren realen Daten erweitern, jetzt sind die Daten etwa verrauscht </li>
 <li>ein komplexeres Modell ausprobieren (z.B. Random Forest)</li>
-
-
+<p>
+<p> <b>W </b><br>
 <a href = "SpamKlassifikationPrasentation.pdf"> Präsentation des Projekts Juli 2024</a>  
 <a href = "Sprints_Projektbeschreibung.ipynb"> Sprints</a>   
 <a href = "model_notebook.ipynb"> Notebook mit trainiertem Modell</a>  
